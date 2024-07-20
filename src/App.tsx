@@ -45,7 +45,8 @@ function App() {
         </a>
       </div>
      <button onClick={signOut}>Sign out</button>
-    </main> )}
+    </main> 
+    )}
     </Authenticator>
   );
 }
