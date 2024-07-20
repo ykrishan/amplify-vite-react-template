@@ -1,4 +1,3 @@
-
 import { Authenticator } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css'
 
@@ -25,13 +24,10 @@ function App() {
     client.models.Todo.delete({ id })
   }
 
-  return (
-       
+  return (   
     <Authenticator>
       {({ signOut }) => (
-    
     <main>
-      <button onClick={signOut}>Sign out</button>
       <h1>My todos</h1>
       <button onClick={createTodo}>+ new</button>
       <ul>
@@ -48,6 +44,7 @@ function App() {
           Review next step of this tutorial.
         </a>
       </div>
+     <button onClick={signOut}>Sign out</button>
     </main> )}
     </Authenticator>
   );
