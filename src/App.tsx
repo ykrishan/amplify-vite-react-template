@@ -1,3 +1,7 @@
+
+import { Authenticator } from '@aws-amplify/ui-react'
+import '@aws-amplify/ui-react/styles.css'
+
 import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
@@ -22,7 +26,10 @@ function App() {
   }
 
   return (
+      {({ signOut }) => (
+    
     <main>
+      <button onClick={signOut}>Sign out</button>
       <h1>My todos</h1>
       <button onClick={createTodo}>+ new</button>
       <ul>
@@ -39,8 +46,11 @@ function App() {
           Review next step of this tutorial.
         </a>
       </div>
-    </main>
+    </main> )}
+    </Authenticator>
   );
 }
+    
+    <Authenticator>
 
 export default App;
